@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ContactusController;
+use App\Http\Controllers\EmailController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,6 +19,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::resource('emails', EmailController::class)->names('emails');
+Route::resource('contactus', ContactusController::class)->names('contactus');
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
