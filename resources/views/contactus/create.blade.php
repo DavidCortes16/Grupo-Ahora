@@ -62,6 +62,7 @@
 
             </div>
                 {!! Form::submit('Crear Petición', ['class' => 'btn btn-primary']) !!}
+            @csrf
             {!! Form::close() !!}
         </div>
     </div>

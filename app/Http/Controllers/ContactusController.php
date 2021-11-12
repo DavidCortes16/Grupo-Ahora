@@ -7,9 +7,10 @@ use Illuminate\Http\Request;
 
 class ContactusController extends Controller
 {
-    public function create()
+    public function store(Request $request)
     {
-        $contactus = Contactus::all();
+        $contactu = Contactus::create($request->all());
+        dd($contactu);
         return view('contactus.create', compact('contactus'));
     }
 }

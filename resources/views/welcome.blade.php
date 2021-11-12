@@ -252,7 +252,7 @@
                         <div class="row">
                             <div class="col-6">
                                 {!! Form::label('name', 'Nombre') !!}
-                                {!! Form::text('name', null, ['class' => 'form-control', 'placeholder' => 'Ingrese el nombre completo']) !!}
+                                {!! Form::text('name', null, ['class' => 'form-control', 'placeholder' => 'Ingrese el nombre completo', 'required']) !!}
                                 @error('name')
                                     <small class="text-danger">
                                         {{ $message }}
@@ -260,15 +260,15 @@
                                 @enderror
                                 <br>
                                 {!! Form::label('email', 'Correo Electrónico') !!}
-                                {!! Form::text('email ', null, ['class' => 'form-control', 'placeholder' => 'Ingrese el correo electrónico']) !!}
-                                @error('email ')
-                                <small class="text-danger">
-                                    {{ $message }}
-                                </small>
+                                {!! Form::text('email', null, ['class' => 'form-control', 'placeholder' => 'Ingrese el correo electrónico', 'required']) !!}
+                                    @error('email ')
+                                    <small class="text-danger">
+                                        {{ $message }}
+                                    </small>
                                 @enderror
                                 <br>
                                 {!! Form::label('phone', 'Número de Contacto') !!}
-                                {!! Form::number('phone', null, ['class' => 'form-control', 'placeholder' => 'Ingrese el número telefónico']) !!}
+                                {!! Form::number('phone', null, ['class' => 'form-control', 'placeholder' => 'Ingrese el número telefónico', 'required']) !!}
                                 @error('phone')
                                 <small class="text-danger">
                                     {{ $message }}
@@ -279,7 +279,7 @@
                             </div>
                             <div class="col-6">
                                 {!! Form::label('city', 'Ciudad / Departamento') !!}
-                                {!! Form::text('city', null, ['class' => 'form-control', 'placeholder' => 'Ciudad / Departamento']) !!}
+                                {!! Form::text('city', null, ['class' => 'form-control', 'placeholder' => 'Ciudad / Departamento', 'required']) !!}
                                 @error('city')
                                     <small class="text-danger">
                                         {{ $message }}
@@ -287,8 +287,8 @@
                                 @enderror
                                 <br>
                                 <div class="form-group">
-                                    <textarea name="txtMsg" class="form-control" placeholder="Your Message *"
-                                        style="width: 100%; height: 150px;"></textarea>
+                                    <textarea name="message" class="form-control" placeholder="Your Message *"
+                                        style="width: 100%; height: 150px;"required></textarea>
                                 </div>
                             </div>
                         </div>
